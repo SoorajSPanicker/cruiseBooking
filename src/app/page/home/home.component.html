@@ -1,0 +1,136 @@
+<div style="display: flex;justify-content:right">
+  <a (click)="logout()" class="btn btn-outline-primary m-3" href="page">Logout</a>
+</div>
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active w-100">
+      <img
+        src="https://i.postimg.cc/nLhGxBqf/cordint.jpg"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://i.postimg.cc/6p0xSf5V/cordilahh.jpg"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://i.postimg.cc/fyrhHzwG/cord.webp"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section id="about">
+  <div class="m-5">
+    <div class=" ">
+      <div class="">
+        <h1  style="color: #48c9f7;">Cordelia Cruise | Chennai-At Sea-Chennai</h1>
+        <p class="lead mb-5 fs-4">
+          Embark on an amazing cruising experience in Chennai and enjoy sailing
+          in the azure waters of the Bay of Bengal. Take in the unending views
+          of the ocean, that will fill your soul with sheer bliss. Spend two
+          nights on the uber-luxurious Cordelia Cruise & enjoy a lavish stay in
+          the comfortable rooms of The Empress. Have a memorable stay with your
+          loved ones and avail of various luxurious amenities. Savour delectable
+          Indian and International cuisines throughout the cruise. Have fun
+          tapping your toes to the beat of different entertainment programs or
+          take a relaxing break at the spa.
+        </p>
+        <h2 style="color: #48c9f7;">Highlights</h2>
+        <ul>
+          <li class="fs-5 mb-1">
+            Embark on this exciting 3 Days & 2 Nights cruise in the azure waters
+            of the Bay of Bengal.
+          </li>
+          <li class="fs-5 mb-1">
+            Experience a blissful stay in the luxurious cabins of the cruise
+            which are equipped with deluxe amenities.
+          </li>
+          <li class="fs-5 mb-1">
+            Go partying at the club or try your luck in the casino or just relax
+            at the spa and have a memorable cruise.
+          </li>
+          <li class="fs-5 mb-1">
+            The voyage takes place aboard The Empress and offers a great blend
+            of lavish sailing with various entertainment activities.
+          </li>
+        </ul>
+        <h2 class="mt-5" style="color: #48c9f7;">Overview</h2>
+        <p>
+          <span style="color: blue;"> Meeting Location:</span>
+          Island Grounds, Flag Staff Road, Port Trust Officers
+          Quarters, Sathya Nagar, Chennai Port Trust, Chennai, Tamilnadu, 60009
+        </p>
+        <p>
+          <span style="color: blue;">Departure Dates(2023):</span>
+           3 June, 17 June, 1 July, 15 July, 29 July, 12
+          Aug, 26 Aug, 9 Sep
+        </p>
+        <p><span style="color: blue;">Check-in/Departure:</span>  8:30 PM (3 June), 6:00 PM (23 September)</p>
+        <p><span style="color: blue;"> Check-Out/Arrival:</span>  9:00 AM (5 June), 8:00 AM (25 September)</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 m-5">
+  <h1>Cruise Services</h1>
+  <div class="container px-4 px-lg-5 mt-5">
+    <div
+      class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+    >
+      <div *ngFor="let i of allrooms" class="col mb-5">
+        <div class="card h-100">
+          <!-- Product image-->
+          <img class="card-img-top" src="{{ i.image }}" alt="..." />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">{{ i.rtype }}</h5>
+              <!-- Product price-->
+              INR {{ i.price }}/adult
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-primary mt-auto" href="page/view/{{i.rtype}}">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

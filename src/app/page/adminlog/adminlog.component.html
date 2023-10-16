@@ -1,0 +1,33 @@
+<div class="container" style="display: flex;justify-content: space-around;">
+    <form [formGroup]="adlogModelForm" class="border border-black w-50 m-5 p-5 rounded-4"  action="">
+        <h2 class="text-center mb-4">Login</h2>
+        <label for="u1">Enter the email</label><br>
+        <input formControlName="email" class="w-100 mt-3 mb-4" type="text" id="u1" name="ema"><br>
+        <div
+        *ngIf="
+          adlogModelForm.get('email')?.errors &&
+          adlogModelForm.get('email')?.touched
+        "
+      >
+        <p class="text-danger">invalid email</p>
+      </div>
+        <label for="pass">Enter the password</label><br>
+        <input formControlName="psw" class="w-100 mt-3 mb-5"  type="password" id="p1" name="pass">
+        <div
+        *ngIf="
+          adlogModelForm.get('psw')?.errors &&
+          adlogModelForm.get('psw')?.touched
+        "
+      >
+        <p class="text-danger">Accept letters and numbers only</p>
+      </div>
+        <div style="display: flex; justify-content: center">
+            <button (click)="adlogin()" type="submit" class="mb-1">Login</button>
+        </div>
+        
+        <p class="text-center">Don't have account ?<a class="text-decoration-none" href="page/adminsignup"> Create account</a></p>
+        <div style="display: flex;justify-content: center;">
+          <button style="background-color: #f08a05;color: white ;" (click)="userlogin()" type="submit">User Login</button>
+        </div>
+    </form>
+</div>

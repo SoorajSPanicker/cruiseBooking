@@ -1,0 +1,49 @@
+<div class="p-5 container mt-2 mb-2 border border-primary w-50">
+    <h2 class="text-center mb-5">Edit Room Details</h2>
+    <form (ngSubmit)="editroom()" class="text-center" id="d" action="">
+      <div class="mb-3  row">
+        <label for="na" class="col-3 col-form-label">Room Type:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.rtype" type="text" class="form-control" id="na" name="nam" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="ca" class="col-3 col-form-label">Duration:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.duration"  type="text" class="form-control" id="ca" name="cat" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="de" class="col-3 col-form-label">Description:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.description" type="text" class="form-control" id="de" name="des" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="pr" class="col-3 col-form-label">Room Size:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.rsize" type="number" class="form-control" id="pr" name="pri" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="im" class="col-3 col-form-label">Price:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.price" type="number" class="form-control" id="im" name="ima" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="ra" class="col-3 col-form-label">Age Policy:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.apolicy" type="text" class="form-control" id="ra" name="rat" />
+        </div>
+      </div>
+      <div class="mb-3  row">
+        <label for="au" class="col-3 col-form-label">Image:</label>
+        <div class="col-6">
+          <input  [(ngModel)]="pdata.image" type="text" class="form-control" id="au" name="aut" />
+        </div>
+      </div>
+      
+      <button class="btn btn-primary" type="submit">Edit</button>
+    </form>
+  </div>

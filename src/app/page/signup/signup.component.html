@@ -1,0 +1,60 @@
+<div class="container w-50 " style="margin-top: 5%">
+  <div class="text-center border border-black" style="background-color: #f08a05;">
+    <h2 class="m-4">SIGN UP</h2>
+    <div style="display: flex; justify-content: space-around">
+      <form
+        [formGroup]="signUpModelForm"
+        class="mb-5 w-75 border border-black rounded-2 bg-light"
+        action=""
+      >
+        <input
+          formControlName="uname"
+          id="u1"
+          name="uname"
+          class="w-75 m-3 rounded"
+          type="text"
+          placeholder="Enter the user name"
+        /><br />
+        <div *ngIf="signUpModelForm.get('uname')?.errors&&signUpModelForm.get('uname')?.touched" >
+          <p class="text-danger">Accept letters only</p>
+        </div>
+        <input
+          formControlName="email"
+          id="n1"
+          name="email"
+          class="w-75 m-3 rounded"
+          type="text"
+          placeholder="Enter the email id"
+        /><br />
+        <div *ngIf="signUpModelForm.get('email')?.errors&&signUpModelForm.get('email')?.touched" >
+          <p class="text-danger">invalid email</p>
+        </div>
+        <input
+          formControlName="psw"
+          id="p1"
+          name="psw"
+          class="w-75 m-3 rounded"
+          type="password"
+          placeholder="Enter the password"
+        /><br />
+        <div *ngIf="signUpModelForm.get('psw')?.errors&&signUpModelForm.get('psw')?.touched">
+          <p class="text-danger">Accept letters and numbers only</p>
+        </div>
+        <input
+          formControlName="cpsw"
+          id="p2"
+          name="cpsw"
+          class="w-75 m-3 rounded"
+          type="password"
+          placeholder="Confirm password"
+        /><br />
+        <div *ngIf="pswMatch">
+          <p class="text-danger">Password doesn't match</p>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <button (click)="signup()" type="submit" class="mb-1 ">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

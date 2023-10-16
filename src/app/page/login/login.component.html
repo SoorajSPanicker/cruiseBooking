@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-6 text-center d-none d-sm-block" style="margin-top: 10%">
+    <img  src="https://i.postimg.cc/FKdvN223/cruise-ship-vector-2384854.jpg" alt="">
+  </div>
+  <div
+    class="col-6"
+    style="
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 5%;
+      margin-bottom: 3%;
+    "
+  >
+    <form
+      [formGroup]="loginModelForm"
+      class="border border-primary w-75 pt-5 ps-5 pe-5 pb-2 rounded-4"
+      action=""
+    >
+      <h2 class="text-center mb-4">Login</h2>
+      <div>
+        <label for="u1">Enter the Email Id</label><br />
+        <input
+          formControlName="email"
+          class="w-100 mt-3 mb-4"
+          type="text"
+          id="u1"
+          name="email"
+        />
+      </div>
+      <div
+        *ngIf="
+          loginModelForm.get('email')?.errors &&
+          loginModelForm.get('email')?.touched
+        "
+      >
+        <p class="text-danger">invalid email</p>
+      </div>
+      <div>
+        <label for="pass">Enter the password</label><br />
+        <input
+          formControlName="psw"
+          class="w-100 mt-3 mb-2"
+          type="password"
+          id="p1"
+          name="psw"
+        />
+      </div>
+      <div
+        *ngIf="
+          loginModelForm.get('psw')?.errors &&
+          loginModelForm.get('psw')?.touched
+        "
+      >
+        <p class="text-danger">Accept letters and numbers only</p>
+      </div>
+      
+
+      <div style="display: flex; justify-content: center">
+        <button (click)="login()" type="submit" class="mb-1">Login</button>
+      </div>
+
+      <p class="text-center">
+        Don't have account ?<a routerLink="signup" class="text-decoration-none"> Create account</a>
+      </p>
+      <div style="display: flex; justify-content: center">
+        <button style="background-color: #f08a05;color: white ;" (click)="adminlogin()" type="submit">Admin Login</button>
+      </div>
+    </form>
+  </div>
+</div>

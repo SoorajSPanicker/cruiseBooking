@@ -1,0 +1,25 @@
+<div class="container" style="display: flex;justify-content: space-around;">
+    <form  [formGroup]="adminModelForm" class="p-5 m-5 w-50 border border-black rounded-2" action="">
+        <h2 class="text-center mb-5">Sign Up</h2>
+        
+        <input formControlName="uname" id="n1" name="uname" class="w-100 mb-4 rounded" type="text" placeholder="Enter the name"><br>
+        <div *ngIf="adminModelForm.get('uname')?.errors&&adminModelForm.get('uname')?.touched" >
+            <p class="text-danger">Accept letters only</p>
+          </div>
+          <input formControlName="email" id="n1" name="uname" class="w-100 mb-4 rounded" type="text" placeholder="Enter the email"><br>
+          <div *ngIf="adminModelForm.get('email')?.errors&&adminModelForm.get('email')?.touched" >
+            <p class="text-danger">invalid email</p>
+          </div>
+        <input formControlName="psw" id="p1" name="pass" class="w-100 mb-4 rounded" type="password" placeholder="Enter the password"><br>
+        <div *ngIf="adminModelForm.get('psw')?.errors&&adminModelForm.get('psw')?.touched">
+            <p class="text-danger">Accept letters and numbers only</p>
+          </div>
+        <input formControlName="cpsw" id="p2" name="cpass" class="w-100 mb-4 rounded" type="password" placeholder="Confirm password">
+        <div *ngIf="pswMatch">
+            <p class="text-danger">Password doesn't match</p>
+          </div>
+        <div style="display: flex; justify-content: center;">
+            <button style="background-color: #f08a05;" (click)="adminsignup()" type="submit" class="mb-1">Signup</button>
+          </div>
+    </form>
+</div>
