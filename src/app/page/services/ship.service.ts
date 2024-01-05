@@ -13,7 +13,7 @@ export class ShipService {
       email,
       psw,
     };
-    return this.http.post('http://localhost:8000/cruiseship/userSignup',bodyData);
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/userSignup',bodyData);
   }
 
   adminsignApi(uname: any, email: any, psw: any) {
@@ -22,7 +22,7 @@ export class ShipService {
       email,
       psw,
     };
-    return this.http.post('http://localhost:8000/cruiseship/regadmin',bodyData);
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/regadmin',bodyData);
   }
 
   loginApi(email: any, psw: any){
@@ -30,7 +30,7 @@ export class ShipService {
       email,
       psw
     }
-    return this.http.post('http://localhost:8000/cruiseship/userlogin',bodyData)
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/userlogin',bodyData)
   }
 
   adloginApi(email: any, psw: any){
@@ -38,19 +38,19 @@ export class ShipService {
       email,
       psw
     }
-    return this.http.post('http://localhost:8000/cruiseship/adminlogin',bodyData)
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/adminlogin',bodyData)
   }
 
 
   roomsApi(){
-    return this.http.get('http://localhost:8000/cruiseship/shiprooms')
+    return this.http.get('https://cruiseserver-0dty.onrender.com/cruiseship/shiprooms')
   }
 
   singleroom(rtype:any){
-    return this.http.get('http://localhost:8000/cruiseship/single/'+rtype)
+    return this.http.get('https://cruiseserver-0dty.onrender.com/cruiseship/single/'+rtype)
   }
   deleteroom(rtype:any){
-    return this.http.delete('http://localhost:8000/cruiseship/delete/'+rtype)
+    return this.http.delete('https://cruiseserver-0dty.onrender.com/cruiseship/delete/'+rtype)
   }
 
   addRoomApi(rtype:any,
@@ -68,10 +68,10 @@ export class ShipService {
         apolicy,
         image}
     
-    return this.http.post('http://localhost:8000/cruiseship/addnewroom',bodyData)
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/addnewroom',bodyData)
   }
   editRoom(rtype:any,pdata:any){
-    return this.http.post('http://localhost:8000/cruiseship/updatedata/'+rtype,pdata)
+    return this.http.post('https://cruiseserver-0dty.onrender.com/cruiseship/updatedata/'+rtype,pdata)
   }
 
 
