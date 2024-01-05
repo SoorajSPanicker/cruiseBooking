@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ShipService } from '../services/ship.service';
 import { Router } from '@angular/router';
@@ -24,7 +25,9 @@ export class LoginComponent implements OnInit {
     private rout: Router,
     private fb: FormBuilder
   ) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+ 
+  }
   login() {
     if (this.loginModelForm.valid) {
       var email = this.loginModelForm.value.email;

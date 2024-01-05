@@ -9,24 +9,25 @@
   <div class="carousel-inner">
     <div class="carousel-item active w-100">
       <img
-        src="https://i.postimg.cc/nLhGxBqf/cordint.jpg"
-        style="height: 550px"
+        src="https://i.postimg.cc/BtfbS0vV/Cordelia-Cruises.jpg"
+        style="height: 350px"
         class="d-block w-100"
         alt="..."
       />
     </div>
+   
     <div class="carousel-item">
       <img
         src="https://i.postimg.cc/6p0xSf5V/cordilahh.jpg"
-        style="height: 550px"
+        style="height: 350px"
         class="d-block w-100"
         alt="..."
       />
     </div>
     <div class="carousel-item">
       <img
-        src="https://i.postimg.cc/fyrhHzwG/cord.webp"
-        style="height: 550px"
+        src="https://i.postimg.cc/TPd09y6C/Cordella-cruise.jpg"
+        style="height: 350px"
         class="d-block w-100"
         alt="..."
       />
@@ -111,12 +112,12 @@
       class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
     >
       <div *ngFor="let i of allrooms" class="col mb-5">
-        <div class="card h-100">
+        <div class="card h-100" style="box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <!-- Product image-->
-          <img class="card-img-top" src="{{ i.image }}" alt="..." />
+          <img class="card-img-top " src="{{ i.image }}" alt="..." />
           <!-- Product details-->
           <div class="card-body p-4">
-            <div class="text-center">
+            <div class="text-center si">
               <!-- Product name-->
               <h5 class="fw-bolder">{{ i.rtype }}</h5>
               <!-- Product price-->
@@ -126,7 +127,7 @@
           <!-- Product actions-->
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
-              <a class="btn btn-outline-primary mt-auto" href="page/view/{{i.rtype}}">View Details</a>
+              <a class="btn btn-outline-primary mt-auto si" href="/page/view/{{i.rtype}}">View Details</a>
             </div>
           </div>
         </div>

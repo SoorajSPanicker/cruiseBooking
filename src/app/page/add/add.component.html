@@ -1,8 +1,8 @@
-<div class="border border-primary p-5 mt-2 mb-2 w-50 container">
+<div class="border border-primary p-1 mt-2 mb-2 w-50 container ">
   <h2 class="text-center mb-5">Add Product</h2>
   <form [formGroup]="addForm" (ngSubmit)="add()" class="text-center" id="d" action="">
     <div class="mb-3 row">
-      <label  for="nu" class="col-3 col-form-label">Room Type:</label>
+      <label for="nu" class="col-3 col-form-label">Room Type:</label>
       <div class="col-6">
         <input formControlName="rtype" type="text" class="form-control" id="nu" />
       </div>
@@ -44,26 +44,8 @@
       </div>
     </div>
     <div>
-        <button class="justify-content-center btn btn-dark" type="submit">Add</button>
+      <button class="justify-content-center btn btn-dark" type="submit">Add</button>
     </div>
-    <!-- <div class="mb-3 row">
-      <label for="au" class="col-3 col-form-label">Author</label>
-      <div class="col-6">
-        <input type="text" class="form-control" id="au" />
-      </div>
-    </div>
-    <div class="mb-3 row">
-      <label for="la" class="col-3 col-form-label">Language</label>
-      <div class="col-6">
-        <input type="text" class="form-control" id="la" />
-      </div>
-    </div>
-    <div class="mb-3 row">
-      <label for="pu" class="col-3 col-form-label">Publisher</label>
-      <div class="col-6">
-        <input type="text" class="form-control" id="pu" />
-      </div>
-    </div>
-    <button type="submit">Add</button> -->
+
   </form>
 </div>

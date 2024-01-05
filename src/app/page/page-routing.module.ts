@@ -14,19 +14,18 @@ import { AdviewComponent } from './adview/adview.component';
 import { BookingComponent } from './booking/booking.component';
 import { AdbookComponent } from './adbook/adbook.component';
 
-const routes: Routes = [{ path: 'page', component: PageComponent },
-{path:'',component:LoginComponent},
-{path:'signup',component:SignupComponent},
-{path:'home',component:HomeComponent},
-{path:'view/:rtype',component:ViewComponent},
-{path:'add',component:AddComponent},
-{path:'edit/:rtype',component:EditComponent},
-{path:'adminlogin',component:AdminlogComponent},
-{path:'adminsignup',component:AdminsignComponent},
-{path:'adminhome',component:AdhomeComponent},
-{path:'adview/:rtype',component:AdviewComponent},
-{path:'book/:rtype',component:BookingComponent},
-{path:'adbook/:rtype',component:AdbookComponent}];
+const routes: Routes = [{ path: '', component: LoginComponent },
+{ path: 'signup', component: SignupComponent },
+{ path: 'home', component: HomeComponent },
+{ path: 'view/:rtype', component: ViewComponent },
+{ path: 'add', component: AddComponent },
+{ path: 'edit/:rtype', component: EditComponent },
+{ path: 'adminlogin', component: AdminlogComponent },
+{ path: 'adminsignup', component: AdminsignComponent },
+{ path: 'adminhome', component: AdhomeComponent },
+{ path: 'adview/:rtype', component: AdviewComponent },
+{ path: 'book/:rtype', component: BookingComponent },
+{ path: 'adbook/:rtype', component: AdbookComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

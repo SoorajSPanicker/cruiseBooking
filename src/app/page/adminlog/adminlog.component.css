@@ -1,0 +1,15 @@
+@media(max-width:376px) {
+form{
+    width: 100%;
+   }
+}
+@media(max-width:1024px){
+    form{
+        width:70%
+    }
+}
+@media(max-width:1441px){
+    form{
+        width:75%
+    }
+}

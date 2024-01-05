@@ -14,11 +14,11 @@
                 <p class="lead">{{pdata.apolicy}}</p>
                 <div class="d-flex justify-content-between">
                     <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> -->
-                    <a href="page/adbook/{{pdata.rtype}}"  class="btn btn-outline-primary flex-shrink-0" type="button">
+                    <a routerLink="/page/adbook/{{pdata.rtype}}"  class="btn btn-outline-primary flex-shrink-0" type="button">
                         <!-- <i class="bi-cart-fill me-1"></i> -->
                         BOOK
                     </a>
-                    <a href="page/edit/{{pdata.rtype}}" class="btn btn-outline-primary flex-shrink-0" type="button">EDIT</a>
+                    <a routerLink="/page/edit/{{pdata.rtype}}" class="btn btn-outline-primary flex-shrink-0" type="button">EDIT</a>
                   <!-- <a href="page/home">  <button (click)="deleteroom(pdata.rtype)" class="btn btn-outline-dark flex-shrink-0" type="submit">DELETE</button></a> -->
                   <button (click)="deleteroom()" class="btn btn-outline-primary flex-shrink-0" type="button">Delete</button>
                 </div>

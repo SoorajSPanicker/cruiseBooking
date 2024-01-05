@@ -22,7 +22,7 @@ export class AdminlogComponent implements OnInit {
  
   constructor(private fb:FormBuilder,private ss:ShipService,private rout:Router){}
   ngOnInit(): void {
-    
+   
   }
   adlogin(){
     if (this.adlogModelForm.valid) {
